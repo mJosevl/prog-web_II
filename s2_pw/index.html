@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   
+    <title>Concesionario de Autos</title>
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+        <!-- Encabezado -->
+        <header class="text-center mt-3">
+            <h1>Venta de Autos</h1>
+        </header>
+
+        <!-- Navegación -->
+        <nav class="mb-3">
+            <a class="btn btn-primary" href="#">Home</a>
+            <a class="btn btn-primary" href="#">About Us</a>
+            <a class="btn btn-primary" href="#">Contact</a>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main>
+            <h2>Chevrolet Corvette Stingray 2023</h2>
+            <p>El <b>Chevrolet Corvette Stingray 2023</b> es la última incorporación a la prestigiosa línea de Chevrolet. Este modelo trae varias novedades y características que lo hacen destacar en el mercado. Su <b>comodidad</b>, <b>seguridad</b> y <b>conectividad</b> son solo algunas de las características que invitan al cliente a considerar este vehículo.</p>
+            <picture>
+                <source media="(max-width:20%)" srcset="small.jpg">
+                <source media="(min-width:10%)" srcset="large.jpg">
+                <img class="imagen" src="./img/corvete2.jpg" alt="Car">
+              </picture>
+            <!-- Modelo del Mes - Precios en Tablet y escalando -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">Precio (USD)</h3>
+                    <p class="text-center">$83,840</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">Precio (CLP)</h3>
+                    <p class="text-center">$67.072.000</p>
+                </div>
+            </div>
+
+            <!-- Especificaciones técnicas con scroll horizontal -->
+            <div class="table-responsive">
+                <table class="table table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th>Cilindrada</th>
+                            <th>Potencia</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6.2L</td>
+                            <td>490 hp @ 6,450 rpm</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="mt-5 text-center">
+            <p>IACC Programación Web II</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Última Actualización
+            </button>
+        </footer>
+
+    </div>
+
+   
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Última Actualización</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="fechaActualizacion">La página fue actualizada el [Fecha aquí].</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap y js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/s2_pw/js/semana2.js"></script>
+</body>
+
+</html>
