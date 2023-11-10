@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador</title>
+</head>
+<body>
+    <script>
+        // Función que muestra el mensaje "Usted es mayor de edad" si la variable contiene un valor mayor que 18
+        function verificarEdad() {
+          // Declarar una variable de tipo número y asignarle el valor que el usuario ingrese en el prompt
+          let edad = prompt("Ingrese su edad");
+          // Comparar el valor de la variable con 18
+          if (edad > 18) {
+            // Mostrar el mensaje "Usted es mayor de edad" en el elemento p con id "mensaje"
+            document.getElementById("mensaje").innerHTML = "Usted es mayor de edad";
+          }else{
+            document.getElementById("mensaje").innerHTML="Usted es menor de edad";
+          }
+        }
+        </script>
+    
+        
+        <h1>Verificador de edad</h1>
+        <button onclick="verificarEdad()">Verificar</button>
+        <p id="mensaje"></p>
+    
+</body>
+</html>

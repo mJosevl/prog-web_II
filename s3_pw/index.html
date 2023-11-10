@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento</title>
+</head>
+
+    <script>
+        // Función que calcula el 15% de descuento sobre el precio original de un producto y muestra el monto total
+        function calcularDescuento() {
+          // Obtener el valor del elemento input con id "precio"
+          let precio = document.getElementById("precio").value;
+          // Validar que el precio sea un número positivo
+          if (precio > 0) {
+            // Calcular el 15% de descuento
+            let descuento = precio * 0.15;
+            // Calcular el monto total
+            let total = precio - descuento;
+            // Mostrar el monto total en el elemento span con id "total"
+            document.getElementById("total").innerHTML = total;
+          } else {
+            // Mostrar un mensaje de error en el elemento span con id "total"
+            document.getElementById("total").innerHTML = "Ingrese un precio válido";
+          }
+        }
+        </script>
+       
+        <body>
+        <h1>Calculadora de descuento</h1>
+        <p>Ingrese el precio original del producto:</p>
+        <input type="number" id="precio" min="0">
+        <button onclick="calcularDescuento()">Calcular</button>
+        <p>El monto total con el 15% de descuento es:</p>
+        <span id="total"></span>
+</body>
+</html>
