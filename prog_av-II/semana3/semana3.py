@@ -9,14 +9,14 @@ class Lente:
         self.costo_marca = {
             'MarcaX': 1.2,
             'MarcaY': 1.3,
-            # Agrega más marcas aquí
+            
         }
 
         # Diccionario de costos por receta
         self.costo_receta = {
             'RecetaA': 1.1,
             'RecetaB': 1.2,
-            # Agrega más recetas aquí
+         
         }
 
     def calcular_precio(self):
