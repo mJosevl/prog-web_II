@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana4</title>
+</head>
+<body>
+
+        <h1>Buscador de elementos por ID</h1>
+        <p>Id: <input id="idBusqueda" type="text"></p>
+        <button onclick="encontrarPorId()">Buscar</button>
+        <p id="resultado"></p>
+    
+        <!-- Aquí creamos algunos elementos para buscar -->
+        <div id="elemento1">Este es el elemento 1 </div>
+        <div id="elemento2">Este es el elemento 2</div>
+        <div id="elemento3">Este es el elemento 3</div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        function encontrarPorId() {
+            var id = document.getElementById('idBusqueda').value;
+            var elemento = $("#" + id);
+            if (elemento.length) {
+                document.getElementById('resultado').innerText = 'Elemento encontrado: ' + elemento.text();
+            } else {
+                document.getElementById('resultado').innerText = 'No se encontró ningún elemento con el ID proporcionado.';
+            }
+        }
+        </script>
+</body>
+</html>

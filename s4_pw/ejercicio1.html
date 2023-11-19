@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana4</title>
+</head>
+<body>
+  <h1>Calculadora de cuotas del club de ajedrez</h1>
+  <p>Edad: <input id="edad" type="number"></p>
+  <p>¿Son los padres socios? <input id="esSocio" type="checkbox"></p>
+  <button onclick="calcularCuota()">Calcular cuota</button>
+  <p id="resultado"></p>
+<script>
+    function calcularCuota() {
+        var edad = document.getElementById('edad').value;
+        var esSocio = document.getElementById('esSocio').checked;
+        var cuota = 800;
+        if (edad > 60) {
+            cuota *= 0.6;
+        } else if (edad < 21) {
+            cuota *= esSocio ? 0.65 : 0.75;
+        }
+        document.getElementById('resultado').innerText = 'La cuota es: ' + cuota;
+    }
+</script>
+
+</body>
+</html>

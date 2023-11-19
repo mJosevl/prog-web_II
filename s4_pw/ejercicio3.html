@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana4</title>
+</head>
+<body>
+    <h1>Objeto Trabajador</h1>
+    <button onclick="crearTrabajador()">Crear trabajador</button>
+    <p id="resultado"></p>
+    <script>
+    function crearTrabajador() {
+        var Trabajador = {
+            nombre: "Juan",
+            edad: 30,
+            puesto: "Ingeniero",
+            salario: 50000,
+            empresa: "XYZ"
+        };
+        document.getElementById('resultado').innerText = JSON.stringify(Trabajador);
+    }
+    </script>
+
+</body>
+</html>
