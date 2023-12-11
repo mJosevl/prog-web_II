@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana5</title>
+    <!-- Agrega Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+       <h1>Formulario Vehículos</h1>
+  </header>
+<div class="container">
+    <form action="procesar.php" method="post">
+      <div class="form-group">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" class="form-control" id="matricula" name="matricula">
+      </div>
+      <div class="form-group">
+        <label for="marca">Marca:</label>
+        <input type="text" class="form-control" id="marca" name="marca">
+      </div>
+      <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <input type="text" class="form-control" id="modelo" name="modelo">
+      </div>
+      <div class="form-group">
+        <label for="ano">Año:</label>
+        <input type="text" class="form-control" id="ano" name="ano">
+      </div>
+      <div class="form-group">
+        <label for="color">Color:</label>
+        <input type="text" class="form-control" id="color" name="color">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+<!-- Agrega Bootstrap JS y dependencias -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
