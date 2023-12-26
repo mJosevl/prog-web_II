@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyE2lKKfYBAMtMiuDZ+SAFbBX4eFbezj2" crossorigin="anonymous">
+    <title>Semana 8-Hogares Felices </title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Menú de Opciones</h1>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="abrirArchivo()">Abrir</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="leerArchivo()">Leer</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="escribirArchivo()">Escribir</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="cerrarArchivo()">Cerrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="generarPDF()">Generar PDF</a></li>
+        </ul>
+    </div>
+        <script>
+            // Funciones para manipular archivos y generar PDF con html2pdf
+
+// Función para abrir y leer un archivo
+function abrirArchivo() {
+    let input = document.createElement('input');
+    input.type = 'file';
+    input.onchange = e => { 
+        let file = e.target.files[0]; 
+        let reader = new FileReader();
+        reader.readAsText(file,'UTF-8');
+        reader.onload = readerEvent => {
+            let content = readerEvent.target.result;
+            console.log(content);
+        }
+    }
+    input.click();
+}
+
+// Función para escribir en un archivo
+function escribirArchivo() {
+    let contenido = "Contenido del archivo";
+    let blob = new Blob([contenido], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, "archivo.txt");  // Necesitarás la librería FileSaver.js para usar saveAs
+}
+
+// Función para generar un PDF
+function generarPDF() {
+    let doc = new jsPDF();
+    doc.text("Hola mundo!", 10, 10);
+    doc.save("a4.pdf");
+}
+
+        </script>
+
+</body>
+</html>

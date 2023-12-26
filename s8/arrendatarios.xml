@@ -1,0 +1,19 @@
+let xml = `<arrendatarios>
+    <arrendatario>
+        <RUT>12345678-9</RUT>
+        <nombre>Juan Pérez</nombre>
+        <telefono>912345678</telefono>
+        <correo>juan.perez@example.com</correo>
+        <departamento>101</departamento>
+        <tiempoArriendo>12 meses</tiempoArriendo>
+        <montoArriendo>$500.000</montoArriendo>
+    </arrendatario>
+    <!-- Agrega más arrendatarios aquí -->
+</arrendatarios>`;
+
+let blob = new Blob([xml], {type: "text/xml"});
+let url = URL.createObjectURL(blob);
+let a = document.createElement('a');
+a.href = url;
+a.download = 'arrendatarios.xml';
+a.click();
